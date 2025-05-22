@@ -1,0 +1,330 @@
+/* ====== IMPORTS & BASE ====== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+/* ====== NAVIGATION (Same as Gallery) ====== */
+nav {
+  background: linear-gradient(to right, #3f51b5, #9c27b0);
+  background-color: #1a237e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  text-decoration: underline;
+}
+
+span {
+  background: linear-gradient(90deg, #7f53ac 0%, #647dee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  transition: text-shadow 0.3s;
+}
+
+span:hover {
+  text-shadow: 0 0 8px #a74dd1, 0 0 24px #647dee;
+}
+
+
+
+/* ====== HERO SECTION ====== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+  background: #3a3f57;
+
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: 
+    url("xyxx_logo.jpg") right center/cover no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: nowrap;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 40px 10px #7f53ac88, /* purple glow */
+    0 0 80px 20px #647dee55, /* blue glow */
+    0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  max-width: 1100px;
+  min-height: 60vh;
+}
+
+.hero .logo {
+  flex: 1 1 0;
+  max-width: none;
+  min-width: 0;
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(63, 81, 181, 0.18), 0 0 32px 8px #a578ffaa,
+    /* purple glow */ 0 0 16px 4px #bec6f888; /* blue glow */
+  background: #fff;
+  padding: 0.2rem;
+  display: block;
+}
+
+.hero-text {
+  flex: 1 1 0;
+  max-width: none;
+  text-align: left;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(60, 0, 80, 0.12);
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1.6;
+  text-shadow: 0 1px 4px rgba(60, 0, 80, 0.08);
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    min-height: unset;
+    margin: 2rem;
+  }
+  .hero-text {
+    text-align: center;
+    padding: 0rem 0;
+  }
+  .hero .logo {
+    height: auto;
+    width: 70vw;
+    max-width: 500px;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: url("xyxx_logo.jpg") right center/cover no-repeat;
+    opacity: 1;
+  }
+}
+/* ====== END HERO SECTION ====== */
+
+/* ====== INTRO SECTION ====== */
+.intro {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #3f51b5, #9c27b0);
+}
+
+/* ====== MEMBERS SECTION ====== */
+.members {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #5a38a9;
+  background: #3a3f57;
+  background: linear-gradient(
+    to right,
+    #4f2270,
+    #2d2b5a
+  );
+}
+
+.our_members {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.members p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #1a237e;
+}
+
+.members h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.members ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1rem;
+  max-width: 600px;
+  text-align: left;
+}
+
+.members ul li {
+  margin: 0.5rem 0;
+}
+
+.members .btn,
+.members a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.members .btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #3f51b5;
+  color: white !important;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.members .btn:hover {
+  background: #9c27b0;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1a237e;
+}
+
+/* ====== MEMBER CARDS ====== */
+.members .member-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 per row on large screens */
+  gap: 0.5rem;
+  justify-items: center;
+  padding: 2rem 0;
+}
+
+.members .member {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  padding-top: 1rem;
+  border-radius: 10px;
+  width: 200px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+
+}
+
+@media (max-width: 1200px) {
+  .members .member-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .members .member-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .members .member-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .members .member-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.members .member img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  max-width: 160px;
+  min-width: 100px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.05);
+  transition: ease-in-out 0.3s;
+}
+
+.members .member img:hover {
+  transform: scale(1.05);
+  transition: ease-in-out 0.3s;
+  box-shadow: 0 0 30px rgba(84, 50, 205, 0.5), 0 0 0px rgba(117, 60, 153, 0.5); /* blue glow */
+}
+
+.members .member h4 {
+  font-size: 1.2rem;
+  margin: 0.3rem 0 0.1rem 0;
+}
+
+.members .member p {
+  font-size: 0.9rem;
+  color: #9c509e;
+  margin: 0 0 0.2rem 0;
+  line-height: 1.1;
+}

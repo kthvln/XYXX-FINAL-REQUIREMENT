@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d0d25;
+  color: white;
+}
+
+nav {
+  background: linear-gradient(to right, #3f51b5, #9c27b0);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ====== NAVIGATION (Consistent across all pages) ====== */
+nav {
+    background: linear-gradient(to right, #3f51b5, #9c27b0);
+    background-color: #1a237e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    padding: 1rem 2rem;
+  }
+  
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a.active {
+    text-decoration: underline;
+  }
+  
+  span {
+    background: linear-gradient(90deg, #7f53ac 0%, #647dee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    transition: text-shadow 0.3s;
+  }
+  
+  span:hover {
+    text-shadow: 0 0 8px #a74dd1, 0 0 24px #647dee;
+  }
+  
+
+
+.gallery-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #1f1f3a;
+}
+
+.gallery-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-header p {
+  color: #ccc;
+}
+
+.highlight-videos {
+  padding: 2rem;
+}
+
+.highlight-videos h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.video-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 0 1rem;
+}
+
+.video-box {
+  background-color: #2e2e4d;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+}
+
+.video-box:hover {
+  transform: scale(1.03);
+}
+
+footer {
+  background-color: #1a1a2e;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
